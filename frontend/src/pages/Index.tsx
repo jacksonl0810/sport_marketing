@@ -319,7 +319,7 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-24 px-6 bg-black">
+      <section className="py-24 px-6 bg-zinc-950">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-black mb-4">
@@ -526,7 +526,7 @@ export default function Index() {
               {/* Registration Form */}
               <Card className="bg-zinc-900 border-zinc-800">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Athlete Registration</CardTitle>
+                  <CardTitle className="text-2xl font-bold text-white">Athlete Registration</CardTitle>
                   <CardDescription className="text-sm text-gray-400">
                     Fill out your information to get started with our professional services
                   </CardDescription>
@@ -535,7 +535,7 @@ export default function Index() {
                   <form onSubmit={handleRegistration} className="space-y-4">
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="full_name" className="text-sm">Full Name *</Label>
+                        <Label htmlFor="full_name" className="text-sm font-medium text-gray-200">Full Name *</Label>
                         <Input
                           id="full_name"
                           value={formData.full_name}
@@ -547,7 +547,7 @@ export default function Index() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="email" className="text-sm">Email *</Label>
+                        <Label htmlFor="email" className="text-sm font-medium text-gray-200">Email *</Label>
                         <Input
                           id="email"
                           type="email"
@@ -562,7 +562,7 @@ export default function Index() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="phone" className="text-sm">Phone Number</Label>
+                        <Label htmlFor="phone" className="text-sm font-medium text-gray-200">Phone Number</Label>
                         <Input
                           id="phone"
                           type="tel"
@@ -574,7 +574,7 @@ export default function Index() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="sport_type" className="text-sm">Primary Sport *</Label>
+                        <Label htmlFor="sport_type" className="text-sm font-medium text-gray-200">Primary Sport *</Label>
                         <Select
                           value={formData.sport_type}
                           onValueChange={(value) => setFormData({ ...formData, sport_type: value })}
@@ -599,7 +599,7 @@ export default function Index() {
 
                     <div className="grid grid-cols-2 gap-4">
                       <div className="space-y-2">
-                        <Label htmlFor="instagram_handle" className="text-sm">Instagram Handle</Label>
+                        <Label htmlFor="instagram_handle" className="text-sm font-medium text-gray-200">Instagram Handle</Label>
                         <Input
                           id="instagram_handle"
                           value={formData.instagram_handle}
@@ -610,7 +610,7 @@ export default function Index() {
                       </div>
 
                       <div className="space-y-2">
-                        <Label htmlFor="tiktok_handle" className="text-sm">TikTok Handle</Label>
+                        <Label htmlFor="tiktok_handle" className="text-sm font-medium text-gray-200">TikTok Handle</Label>
                         <Input
                           id="tiktok_handle"
                           value={formData.tiktok_handle}
@@ -710,7 +710,7 @@ export default function Index() {
           ) : showInfoRequest ? (
             <Card className="bg-zinc-900 border-zinc-800">
               <CardHeader>
-                <CardTitle className="text-3xl">Request Pricing Information</CardTitle>
+                <CardTitle className="text-3xl font-bold text-white">Request Pricing Information</CardTitle>
                 <CardDescription className="text-base text-gray-400">
                   Tell us about your needs and we'll send you detailed pricing and service information
                 </CardDescription>
@@ -718,7 +718,7 @@ export default function Index() {
               <CardContent>
                 <form onSubmit={handleInfoRequest} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="message" className="text-base">Your Message *</Label>
+                    <Label htmlFor="message" className="text-base font-medium text-gray-200">Your Message *</Label>
                     <Textarea
                       id="message"
                       value={infoRequestData.message}
@@ -750,7 +750,7 @@ export default function Index() {
           ) : (
             <Card className="bg-zinc-900 border-zinc-800">
               <CardHeader>
-                <CardTitle className="text-3xl">Subscribe Now</CardTitle>
+                <CardTitle className="text-3xl font-bold text-white">Subscribe Now</CardTitle>
                 <CardDescription className="text-base text-gray-400">
                   Start your professional athlete journey with our monthly subscription
                 </CardDescription>
